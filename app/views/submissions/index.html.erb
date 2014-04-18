@@ -1,2 +1,33 @@
-<h1>Submissions#index</h1>
-<p>Find me in app/views/submissions/index.html.erb</p>
+<div class="row">
+	<%= form_for @submission, remote: true, :html => {:id => "mainform", :role => "form"} do |f| %>
+		<div class="form-group has-success has-feedback">
+			<%= f.label :income, class: "control-label col-sm-3" %>
+			<div class="col-sm-9">
+			<%= f.number_field :income, class: 'form-control' %>
+			<span class="glyphicon glyphicon-ok form-control-feedback"></span>
+			</div>
+		</div>
+		<div class="form-group">
+			<%= f.label 'How much would you rate the value of parks?' %>
+			<br>
+			<%= f.radio_button :ans_one, 1 %>
+			<%= f.radio_button :ans_one, 2 %>
+			<%= f.radio_button :ans_one, 3 %>
+			<%= f.radio_button :ans_one, 4 %>
+			<%= f.radio_button :ans_one, 5 %>
+		</div>
+		<div class="form-group">
+			<%= f.label 'How much would you rate the value of parks?' %>
+			<br>
+			<%= f.radio_button :ans_two, 1 %>
+			<%= f.radio_button :ans_two, 2 %>
+		</div>
+		<div class="form-group">
+			<%= f.label 'How much would you rate the value of parks?' %>
+			<br>
+			<%= f.radio_button :ans_three, 1 %>
+			<%= f.radio_button :ans_three, 2 %>
+		</div>
+		<%= f.submit 'save', class: 'btn btn-default' %>
+	<% end %>
+</div>

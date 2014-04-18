@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  income: 9.99
+  ans_one: 1
+  ans_two: 1
+  ans_three: 1
+
+two:
+  income: 9.99
+  ans_one: 1
+  ans_two: 1
+  ans_three: 1
